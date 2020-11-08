@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~ 𝕃 𝔸 ℂ 𝕆 𝕃 𝕆 ℝ 𝕊 ~</title>
+
+  <style type="text/css">
+    body {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      padding: 100px;
+      margin: 100px;
+    }
+
+    img {
+      /* width: 200px;
+      height: 200px; */
+      padding: 0;
+      border: 0;
+    }
+
+    img:hover {
+      opacity: 0;
+
+    }
+
+    .container~div {
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      /* width: 200px;
+      height: 200px; */
+      /* padding: 20px; */
+      border: 0;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+  <script>
+
+    // first wait for html structure to load THEN execute this JS
+    window.onload = () => {
+
+      var containerDiv = document.getElementById("container");
+      // can paste from finder: 
+      var allImgString = "IMG_5804.jpg,IMG_5712.jpg,IMG_5711.jpg,IMG_5709.jpg,IMG_5806.jpg,IMG_5708.jpg,IMG_5720.jpg,IMG_5748.jpg,IMG_5737.jpg,IMG_5749.jpg,IMG_5788.jpg,IMG_5771_alt.jpg,IMG_5721.jpg";
+      let allImgArray = allImgString.split(',');
+
+      // randomize array script
+      function shuffleArray(allImgArray) {
+        for (var i = allImgArray.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = allImgArray[i];
+          allImgArray[i] = allImgArray[j];
+          allImgArray[j] = temp;
+        }
+      }
+
+
+
+      function mouseOver() {
+        document.getElementById("demo").style.color = "red";
+      }
+
+      function mouseOut() {
+        document.getElementById("demo").style.color = "black";
+      }
+
+
+
+
+      var i;
+      for (i = 0; i < allImgArray.length; i++) {
+        var createIMG = document.createElement("IMG");
+
+        createIMG.style.width = "300px";
+        createIMG.style.height = "300px";
+
+        createIMG.setAttribute(
+          "src",
+          "/images/" + allImgArray[i]
+        );
+        containerDiv.appendChild(createIMG);
+      }
+
+
+      // COLORTHIEF  
+      const colorThief = new ColorThief();
+      // find first img tag in html 
+      const img = document.querySelector('img');
+
+      const numColors = 10;
+      // pull dominant color as RGB array
+      var imgColor = colorThief.getPalette(img, numColors);
+
+
+
+      for (i = 0; i < allImgArray.length; i++) {
+        var div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.background = "rgb(" + imgColor[i].toString() + ")";
+        div.style.color = "white";
+        div.innerHTML = "COLOR" + i;
+
+        document.getElementById("main").appendChild(div);
+
+
+        var colorBlockDiv = document.getElementById("colorBlock" + i);
+        // colorBlockDiv.style.opacity = 0.2;
+
+        // colorBlockDiv.style.background = "rgb(" + imgColor[i].toString() + ")";
+      }
+
+
+
+
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+  <div id="container">
+    <img src="images/IMG_5711.jpg" style="width: 300px; height: 300px;">
+
+  </div>
+  <div id="main">
+
+  </div>
+
+</body>
+
+</html>

@@ -9,40 +9,28 @@
   <style type="text/css">
     body {
       width: 100%;
-      display: flex;
-      justify-content: center;
     }
 
-    .container {
-      padding: 100px;
-      margin: 100px;
+    #container {
+      width: 100%;
+      display: flex;
+    }
+
+    #colorblocks div {
+      width: 100px;
+      height: 100px;
     }
 
     img {
-      /* width: 200px;
-      height: 200px; */
-      padding: 0;
-      border: 0;
-    }
-
-    img:hover {
-      opacity: 0;
-
-    }
-
-    .container~div {
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      /* width: 200px;
-      height: 200px; */
-      /* padding: 20px; */
-      border: 0;
+      width: 33%;
+      height: auto;
     }
   </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 
-  <script src="lacolors.js"></script>
+  <script src="addimages.js"></script>
+  <script src="colors.js"></script>
 
 
 
@@ -51,13 +39,24 @@
 
 <body>
   <div id="container">
-    <img src="images/IMG_5711.jpg" style="width: 300px; height: 300px;">
-
+    <div id="images">
+      <img src="images/IMG_5804.jpg" id="img0">
+      <img src="images/IMG_5712.jpg" id="img1">
+      <img src="images/IMG_5711.jpg" id="img2">
+      <img src="images/IMG_5709.jpg" id="img3">
+      <img src="images/IMG_5806.jpg" id="img4">
+      <img src="images/IMG_5708.jpg" id="img5">
+      <img src="images/IMG_5720.jpg" id="img6">
+      <img src="images/IMG_5748.jpg" id="img7">
+      <img src="images/IMG_5737.jpg" id="img8">
+      <img src="images/IMG_5749.jpg" id="img9">
+      <img src="images/IMG_5788.jpg" id="img10">
+      <img src="images/IMG_5771_alt.jpg" id="img11">
+      <img src="images/IMG_5721.jpg" id="img12">
+    </div>
+    <div id="colorblocks">
+    </div>
   </div>
-  <div id="main">
-
-  </div>
-
 </body>
 
 </html>

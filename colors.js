@@ -15,7 +15,7 @@ window.onload = () => {
     // add the colors into allImgColors Object, using id as the key value for each:
     allImgColors[imgId] = imgColors;
 
-    allImgTagsArray[i].onmouseover = function() {
+    allImgTagsArray[i].onclick = function() {
       var theseBlocks = generateBlocks(allImgColors[this.id]);
       setBlockDisplay(theseBlocks);
     };

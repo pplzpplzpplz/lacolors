@@ -27,6 +27,7 @@ function generateBlocks(colors) {
   for (i = 0; i < colors.length; i++) {
     var colorBlockDiv = document.createElement("DIV");
     colorBlockDiv.style.background = "rgb(" + colors[i] + ")";
+    colorBlockDiv.innerText = colors[i];
     colorBlocksWrap.appendChild(colorBlockDiv);
   }
   return colorBlocksWrap;

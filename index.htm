@@ -9,6 +9,7 @@
   <style type="text/css">
     body {
       width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
 
@@ -25,6 +26,15 @@
     #images {
       padding-left: 8%;
       width: 90%;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(251, 75, 56);
+    }
+
+    a:hover {
+      font-weight: bold;
     }
 
     img {
@@ -45,7 +55,8 @@
 
     #colorblocks div {
       width: 6.8vw;
-      height: 4.8vh;
+      height: 4.3vh;
+      padding-top: 4px;
       color: white;
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
@@ -69,7 +80,11 @@
 
 <body>
   <div id="container">
+
     <div id="images">
+      <p>Click each image to see generated RGB swatches at left. (Give it a second to load)<br>
+        <a href="lacolors_adobe.zip">Download my 'top picks' as an Adobe Swatch library &#8608;</a>
+      </p>
       <img src="images/IMG_5804.jpg" id="img0">
       <img src="images/IMG_5712.jpg" id="img1">
       <img src="images/IMG_5711.jpg" id="img2">
